@@ -54,7 +54,7 @@ export function PricingSection() {
 
     try {
       // Check if user is logged in first
-      const authResponse = await fetch('http://localhost:3001/api/auth/me', {
+      const authResponse = await fetch('/api/auth/me', {
         credentials: 'include'
       });
 
@@ -71,7 +71,7 @@ export function PricingSection() {
       }
 
       // User is logged in, create payment
-      const paymentResponse = await fetch('http://localhost:3001/api/payment/create', {
+      const paymentResponse = await fetch('/api/payment/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
